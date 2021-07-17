@@ -54,7 +54,7 @@ def main():
             venbeacon="895236998564646a4678"
         
         else:
-            r = requests.post("http://46.137.221.124:5000/register_venue", data={'ven_f_name':venuename,'ven_id': venueid, 'ven_beacon':venbeacon, 'password': password, 'pname':pname, 'email':email, 'ph_no':phonenum, 'lat':lat, 'long':long})
+            r = requests.post("http://46.137.221.124:5000/register_venue", data={'ven_f_name':venuename,'ven_id': venueid, 'password': password, 'ven_beacon':venbeacon, 'password': password, 'pname':pname, 'email':email, 'ph_no':phonenum, 'lat':lat, 'long':long})
             if r.status_code==200:
                 otp=st.sidebar.text_input("OTP")
                 if st.sidebar.button("Verify"):
